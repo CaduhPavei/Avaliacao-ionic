@@ -1,0 +1,60 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>Adicionar transação</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button color="" defaultHref="home" text=""></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-list>
+    <ion-list-header>Adicionar nova transação</ion-list-header>
+    <ion-item>
+      <ion-select label="Tipo de transação" placeholder="">
+        <ion-select-option value="apple">Entrada</ion-select-option>
+        <ion-select-option value="banana">Saída</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-input
+        label="Descrição"
+        placeholder="Descrição da transação"
+      ></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Valor" laceholder="0"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input label="Para" placeholder="Para quem é a transação"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-select label="Categoria" placeholder=""> </ion-select>
+    </ion-item>
+  </ion-list>
+
+  <ion-button
+    icon="add-circle-outline"
+    expand="full"
+    routerLink="/transaction-page"
+    >Salvar Transação</ion-button
+  >
+
+  <ion-card>
+    <ion-list-header>Conferência de informações</ion-list-header>
+    <ion-list lines="none">
+      <ion-item>
+        <ion-label>Tipo: </ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Descrição</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Valor: R$</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Para: </ion-label>
+      </ion-item>
+    </ion-list>
+  </ion-card>
+</ion-content>
